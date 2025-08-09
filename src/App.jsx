@@ -147,7 +147,6 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
           <div className="w-2 h-6 rounded bg-black" />
           <h1 className="text-xl font-bold tracking-tight">F1 Season Tracker</h1>
-          <span className="text-xs text-neutral-500 ml-2">(localStorage)</span>
           <div className="ml-auto flex gap-2">
             <button onClick={exportJSON} className="px-3 py-1.5 rounded-xl border border-neutral-200 hover:bg-neutral-100">Export</button>
             <label className="px-3 py-1.5 rounded-xl border border-neutral-200 hover:bg-neutral-100 cursor-pointer">
