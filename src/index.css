@@ -1,0 +1,86 @@
+/* Tailwind v4 – single import */
+@import "tailwindcss";
+
+/* Light, modern F1-inspired theme */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --color-bg:             #f6f7f9;     /* page background */
+  --color-card:           #ffffff;     /* surfaces */
+  --color-ink:            #0f172a;     /* primary text (slate-900) */
+  --color-ink-muted:      #64748b;     /* secondary text (slate-500) */
+  --color-border:         #e5e7eb;     /* neutral-200 */
+  --color-brand:          #111111;     /* F1 black */
+  --color-accent:         #ef4444;     /* subtle red accent */
+
+  --radius-lg:            1rem;        /* rounded-2xl vibe */
+}
+
+/* Global base styles */
+:root { color-scheme: light; }
+html, body, #root {
+  height: 100%;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Cards & controls */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .5rem .75rem;
+  border-radius: .75rem;
+  border: 1px solid var(--color-border);
+}
+.btn:hover { background: #f3f4f6; }
+
+.btn-primary {
+  background: var(--color-brand);
+  color: white;
+  border-color: var(--color-brand);
+}
+.btn-primary:hover { filter: brightness(1.05); }
+
+.btn-danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+.btn-danger:hover { background: #fff1f2; }
+
+/* Table tweaks */
+.table {
+  width: 100%;
+  font-size: .9rem;
+}
+.table th, .table td {
+  padding: .6rem .75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.table thead th { font-weight: 600; }
+
+/* Inputs */
+input, select {
+  border: 1px solid var(--color-border);
+  border-radius: .625rem;
+  padding: .45rem .6rem;
+  background: white;
+}
+input:focus, select:focus, button:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(17,17,17,.15);
+}
+
+/* Header */
+.app-header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(180%) blur(6px);
+  background: rgba(255,255,255,.85);
+  border-bottom: 1px solid var(--color-border);
+}
